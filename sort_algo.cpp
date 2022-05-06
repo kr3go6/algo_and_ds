@@ -21,7 +21,7 @@ namespace nonstd
     void
     merge(RandomIt pt1_begin, RandomIt pt1_end,
             RandomIt pt2_begin, RandomIt pt2_end,
-            std::unique_ptr<valtype>& dest, Compare comp)
+            std::unique_ptr<valtype>& dest, Compare comp) noexcept
     {
         int idx = 0;
 
