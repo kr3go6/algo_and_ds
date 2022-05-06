@@ -1,7 +1,5 @@
 #include <algorithm>
 #include <cstddef>
-#include <iostream>
-
 
 namespace nonstd
 {
@@ -116,29 +114,6 @@ namespace nonstd
                 start_p = nxt;
                 if (nxt) nxt = nxt->next_;
             }
-
         }
     }
-
-    void printList(SingleLinkedList<double>& l1) {
-        ListNode<double> *tmp = l1.begin();
-
-        while (tmp) {
-            std::cout << tmp << " " << tmp->value() << " " << tmp->next() << std::endl;
-            tmp = tmp->next();
-        }
-    }
-}
-
-
-int main(void)
-{
-    // using namespace nonstd;
-
-    nonstd::SingleLinkedList<int> my_list;
-    my_list = {1, 2, 3, 4, 5};
-    my_list.clear();
-    std::cout << my_list.empty() << std::endl;
-
-    return 0;
 }
